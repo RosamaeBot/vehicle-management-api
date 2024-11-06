@@ -26,7 +26,7 @@ From relearning OOP, and reading up abstract class and interface, I initially dr
 
 ```
 
-                 Vehicle
+                 Fleet
 
               /           \
 
@@ -35,8 +35,8 @@ From relearning OOP, and reading up abstract class and interface, I initially dr
         /    \
  Hatchback    Sedan
 
-A car “is a” vehicle
-A boat “is a” vehicle
+A car “is a” Fleet
+A boat “is a” Fleet
 A hatchback “is a” car
 A sedan “is a” car
 
@@ -51,35 +51,35 @@ Common properties:
 ## 1st Pseudocode draft
 
 ```csharp
-// Any class that implements IVehicle must
+// Any class that implements IFleet must
 // define the following properties
-namespace DefineIVehicle
+namespace DefineIFleet
 {
       using System
 
-      public interface IVehicle
+      public interface IFleet
       {
         int Id;
         string Make;
         string Model;
         double Price;
-        VehicleType VehicleType;
+        FleetType FleetType;
       }
 
-      class VehicleType {
+      class FleetType {
         int id;
         string typename
       }
 }
 
-namespace Vehicle
+namespace Fleet
 {
   using System
-  using DefineIVehicle
+  using DefineIFleet
 
-  public abstract class Vehicle: IVehicle
+  public abstract class Fleet: IFleet
   {
-        public Vehicle(string id):
+        public Fleet(string id):
         {
 
         }
@@ -91,7 +91,7 @@ namespace Vehicle
         }
   }
 
-  public class abstract Car : Vehicle
+  public class abstract Car : Fleet
   {
         public Car(string id) : base(id)
         {
@@ -118,7 +118,7 @@ namespace Vehicle
         public override int Door;
   }
 
-  public abstract class Boat : Vehicle
+  public abstract class Boat : Fleet
   {
         public Boat(string id) : base(id)
         {

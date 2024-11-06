@@ -2,9 +2,9 @@
 
 ## Task 1 :heavy_check_mark:
 
-Design a vehicle management API that for MVP will only cater for cars, but in the future will manage other vehicle types like boats, bikes, caravans etc.
+Design a Fleet management API that for MVP will only cater for cars, but in the future will manage other Fleet types like boats, bikes, caravans etc.
 
-API should expose endpoints to list vehicles, add new vehicle, delete vehicle and update vehicle.
+API should expose endpoints to list Fleets, add new Fleet, delete Fleet and update Fleet.
 
 ## Task 2 :x:
 

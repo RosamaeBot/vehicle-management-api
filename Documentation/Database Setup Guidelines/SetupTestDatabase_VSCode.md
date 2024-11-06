@@ -2,9 +2,9 @@ Here's an updated version of the `SetupTestDatabase_VSCode.md` file, which now i
 
 ---
 
-# Setting Up a Test Database for the Vehicle Management API Using VS Code
+# Setting Up a Test Database for the Fleet Management API Using VS Code
 
-This guide provides step-by-step instructions for setting up a test database (`TestDB`) for the Vehicle Management API using **Visual Studio Code** instead of **Visual Studio 2019**. The setup is facilitated by **SQL Server**, **VS Code’s SQL Server (mssql) extension**, and two Bash scripts to automate the installation of prerequisites and database setup.
+This guide provides step-by-step instructions for setting up a test database (`TestDB`) for the Fleet Management API using **Visual Studio Code** instead of **Visual Studio 2019**. The setup is facilitated by **SQL Server**, **VS Code’s SQL Server (mssql) extension**, and two Bash scripts to automate the installation of prerequisites and database setup.
 
 ---
 
@@ -56,7 +56,7 @@ After installing the prerequisites, run the `setup_vscode_database.sh` script to
 This script will:
 - Connect to your SQL Server instance.
 - Create the `TestDB` database.
-- Download the SQL setup script from [GitHub](https://github.com/normanwongcl/vehicle-management-api/blob/master/Documentation/Database%20Design/TestDB.sql).
+- Download the SQL setup script from [GitHub](https://github.com/normanwongcl/Fleet-management-api/blob/master/Documentation/Database%20Design/TestDB.sql).
 - Execute the script to create the necessary tables and data in `TestDB`.
 
 ---
