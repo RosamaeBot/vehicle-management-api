@@ -1,86 +1,91 @@
-# Vehicle Management API
+# Fleet Management SystemAPI
 
-Vehicle Management API build using [ApiBoilerPlate.AspNetCore](https://github.com/proudmonkey/ApiBoilerPlate) project template.
+Fleet Management SystemAPI built using the [ApiBoilerPlate.AspNetCore](https://github.com/proudmonkey/ApiBoilerPlate) project template.
 
 ## Requirements
-[Tasks requirements](https://github.com/normanwongcl/vehicle-management-api/blob/master/Documentation/)
+- .NET Core SDK: 3.1 or higher
+- .NET Core runtime:
+  - Microsoft.AspNetCore.App: 3.1.7 or higher
+  - Microsoft.NETCore.App: 3.1.7 or higher
 
-## Prerequisite
+### Task Requirements and Documentation
+- [Task Requirements](https://github.com/normanwongcl/Fleet-management-api/blob/master/Documentation/)
+- [Documentation](https://github.com/normanwongcl/Fleet-management-api/blob/master/Documentation/)
 
-```yaml
-.NET Core SDK: 3.1 or higher
-.NET Core runtime:
-  Microsoft.AspNetCore.App: 3.1.7 or higher
-  Microsoft.NETCore.App: 3.1.7 or higher
-```
+## Prerequisite Installation
 
-## Prerequisite install
+Installation instructions for various operating systems:
 
-Installation instructions for anyone using WSL Ubuntu can be found in this [guide](https://ubuntu.com/blog/creating-cross-platform-applications-with-net-on-ubuntu-on-wsl)
+- [Windows](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=netcore31)
+- [macOS](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
+- [Linux](https://docs.microsoft.com/en-us/dotnet/core/install/linux)
 
-Installation for other OS can be found in the documentation link below:
+For WSL Ubuntu users, see the following [guide](https://ubuntu.com/blog/creating-cross-platform-applications-with-net-on-ubuntu-on-wsl) for .NET installation.
 
-[Windows](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=netcore31)
-[macOS](https://docs.microsoft.com/en-us/dotnet/core/install/macos)
-[Linux](https://docs.microsoft.com/en-us/dotnet/core/install/linux)
-
-### All design decision can be found in documentation link below
-
-[Documentation](https://github.com/normanwongcl/vehicle-management-api/blob/master/Documentation/)
-
-## Install
+## Installation
 
 ```bash
 # Clone repository
-git clone git@github.com:normanwongcl/vehicle-management-api.git
+git clone git@github.com:normanwongcl/Fleet-management-api.git
+
+# Navigate into the project directory
+cd Fleet-management-api
 
 # Restore dependencies
 dotnet restore
-
 ```
 
-## Set up a test database
+## Setting Up a Test Database
 
-1. Open Visual Studio 2019
-2. Go to `View` > `SQL Server Object Explorer`
-3. Drilldown to `SQL Server` > `(localdb)\MSSQLLocalDB`
-4. Right-click "`Database`" Folder
-5. Click "`Add New Database`"
-6. Name it as "`TestDB`" and click OK
-7. Right-click on the "`TestDB`" database and then select "`New Query`"
-8. Run this [sql script](https://github.com/normanwongcl/vehicle-management-api/blob/master/Documentation/Database%20Design/TestDB.sql)
+The test database for the Fleet Management SystemAPI can be set up using **Visual Studio Code** and **SQL Server** by following these steps or by using the automated setup scripts provided.
 
-## Test
+### Automated Setup Using Scripts
 
-Run test by using the dotnet cli or in Visual Studio 2019
+Navigate to the `DevScripts/Bash/Setup` directory and run the following scripts:
 
-```
+1. **Install Prerequisites**: 
+   ```bash
+   ./setup_vscode_database_prereqs.sh
+   ```
+
+   This script installs SQL Server, `mssql-cli`, and the SQL Server extension for VS Code.
+
+2. **Set Up the Test Database**: 
+   ```bash
+   ./setup_vscode_database.sh
+   ```
+
+   This script connects to the local SQL Server instance, creates the `TestDB` database, and runs the SQL script to initialize the database.
+
+For manual setup, please refer to the updated [SetupTestDatabase_VSCode.md](https://github.com/normanwongcl/Fleet-management-api/blob/master/Documentation/Database%20Setup%20Guidelines/SetupTestDatabaseOnVSCode.md) guide.
+
+## Running Tests
+
+Run tests using the dotnet CLI or in Visual Studio Code:
+
+```bash
 dotnet test
 ```
 
 ## Project Structure
 
-Explanation of each folders can be found in the articles below:
+Details on the project folder structure and its components can be found in the following articles:
 
-- https://vmsdurano.com/apiboilerplate-a-project-template-for-building-asp-net-core-apis/
-- https://vmsdurano.com/apiboilerplate-new-features-and-improvements-for-building-asp-net-core-3-apis/
+- [ApiBoilerPlate: A Project Template for ASP.NET Core APIs](https://vmsdurano.com/apiboilerplate-a-project-template-for-building-asp-net-core-apis/)
+- [ApiBoilerPlate: New Features and Improvements for ASP.NET Core 3 APIs](https://vmsdurano.com/apiboilerplate-new-features-and-improvements-for-building-asp-net-core-3-apis/)
 
 ## Deployment
 
-```
-
-# TODO
-
+```bash
+# Deployment instructions will be added here
 ```
 
 ## Tooling Decision
 
 ### Why .NET Core?
 
-According to [Thoughtwork](https://www.thoughtworks.com/radar/platforms/net-core), .NET core should be the default for building .NET project.
+.NET Core is considered the default for building .NET projects according to [ThoughtWorks](https://www.thoughtworks.com/radar/platforms/net-core), as it is cross-platform and highly performant.
 
-### Why ApiBoilerPlate.AspNetCore boilerplate?
+### Why ApiBoilerPlate.AspNetCore?
 
-The boilerplate was used to help me quickly scalfold a solution since I went from learning C# syntax, to learning Object-oriented programming, to learning the differences between abstract class / interface (contract), to learning to design a REST API in a few days.
-
-The boilerplate helps me understand how people set up a logger, CORS, Unit Tests, Model/Entity, Controller, api documentation, etc for ASP.NET.
+The boilerplate provides a structured setup that helps streamline setting up essential components like logging, CORS, unit tests, model/entity definitions, controllers, and API documentation in ASP.NET Core. This has been invaluable for transitioning from C# basics to designing a REST API within a short timeframe.
