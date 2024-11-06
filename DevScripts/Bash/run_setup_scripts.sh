@@ -1,0 +1,2 @@
+source DevScripts/Bash/Setup/setup_vscode_database_prereqs.sh
+source DevScripts/Bash/Setup/setup_vscode_database.sh

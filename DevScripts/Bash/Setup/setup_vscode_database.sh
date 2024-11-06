@@ -3,7 +3,7 @@
 # Database configuration
 DB_SERVER="(localdb)\MSSQLLocalDB"
 DB_NAME="TestDB"
-SQL_SCRIPT_URL="https://github.com/normanwongcl/vehicle-management-api/raw/master/Documentation/Database%20Design/TestDB.sql"
+SQL_SCRIPT_URL="https://github.com/tonydev-tools/glbltrck-fleet-management-api/raw/master/Documentation/Database%20Design/TestDB.sql"
 SQL_SCRIPT_FILE="TestDB.sql"
 
 # Check for mssql-cli

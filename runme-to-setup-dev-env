@@ -1,0 +1,3 @@
+#!/bin/bash
+
+source DevScripts/Bash/run_setup_scripts.sh
